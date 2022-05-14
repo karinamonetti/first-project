@@ -1,0 +1,178 @@
+:root {
+    --dark-grey: #0d0e0f;
+    --bg-title2: #7c0235;
+    --c-title: #ede6db;
+    --links: #ee6408;
+    --dark-pink: #b62256;
+    --titles: #7f1e47;
+    --violet: #7e56eb9f;
+    --violet2:#a446df;
+    --violet3: #5f15a1;
+    --pink:#fc4ed6;
+    /*
+    https://coolors.co/palette/006466-065a60-0b525b-144552-1b3a4b-212f45-272640-312244-3e1f47-4d194d
+    */
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    max-width: 100vw;
+    min-width: auto;
+    /* overflow-x: hidden; */
+}
+
+
+/*******************************
+🍃      HEADER
+********************************/
+
+header {
+    background-color: var(--bg-title2);
+    background: rgb(124,2,53);
+    background: -moz-linear-gradient(30deg, rgba(124,2,53,1) 9%, rgba(73,1,31,1) 48%);
+    background: -webkit-linear-gradient(30deg, rgba(124,2,53,1) 9%, rgba(73,1,31,1) 48%);
+    background: linear-gradient(30deg, rgba(124,2,53,1) 9%, rgba(73,1,31,1) 48%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c0235",endColorstr="#49011f",GradientType=1);
+    min-height: 10vh;
+    max-height: auto;
+   display: flex;
+   align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header>h1 {
+    font-family: "Quicksand", sans-serif;
+    letter-spacing: 0.2rem;
+    color: var(--c-title);
+    margin: 0 0 0 1.3rem;
+    text-align: left;
+    font-size: clamp(1.3rem, 2.5vw, 1.6em); 
+    text-shadow: 0.1rem 0.2rem 0.3rem #030001;
+    
+}
+
+
+/*******************************
+🍃    SECTION PRESENTACIÓN
+********************************/
+
+.section-ppal {
+    margin-top: 1rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-top: thin groove #2a31f0;
+    border-right: 10px dashed black;;
+    border-bottom: 5px solid black;
+    border-left: 2px solid var(--pink);
+    /* border-color: #000 #BC6FF1 #2a31f0; */
+    box-shadow: .5rem .6rem var(--violet);
+    width: 60%;
+    padding: 1rem 1.6rem;
+    min-height: 50vh;
+    max-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    font-size: clamp(.85rem, 2.5vw, 1.1rem); 
+    line-height: 1.5rem;
+}
+
+.section-ppal:hover{
+    box-shadow: -10px -15px 15px rgba(179, 98, 255, 0.39), .8rem 1rem var(--violet);
+}
+
+/*******************************
+🍃    SECTION PREVIA
+********************************/
+
+.section {
+    width: 85%;
+    margin: 0 auto;
+    text-align: justify;
+    font-family: "Lato", sans-serif;
+}
+
+.section>h2 {
+    display: inline-block;
+    margin-bottom: 0rem;
+    font-size: 1.3rem;
+    color: var(--titles);
+}
+
+.section>ul {
+    list-style: none;
+    line-height: 1.6rem;
+}
+
+
+/*******************************
+🍃    SECTION CONTENIDO
+********************************/
+
+.site-content {
+    width: 85%;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.site-content>h2 {
+    font-size: 1.3rem;
+    color: var(--titles);
+}
+
+
+/*******************************
+🍃          FOOTER
+********************************/
+
+footer {
+    min-height: 10vh;
+    max-height: auto;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    background-color: var(--dark-grey);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer>p {
+    margin: 0;
+    text-align: center;
+}
+
+
+/*******************************
+🍃    OTRAS FUNCIONALIDADES
+********************************/
+
+a {
+    color: var(--dark-pink);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--links);
+}
+
+hr {
+    width: 70%;
+}
