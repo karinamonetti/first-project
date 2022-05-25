@@ -1,14 +1,4 @@
 :root {
-    --dark-grey: #0d0e0f;
-    --bg-title2: #7c0235;
-    --c-title: #ede6db;
-    --links: #ee6408;
-    --dark-pink: #b62256;
-    --titles: #7f1e47;
-    --violet: #7e56eb9f;
-    --violet2:#a446df;
-    --violet3: #5f15a1;
-    --pink:#fc4ed6;
 
     /* VARIABLES */
     --bg-color: #0f172a;
@@ -18,13 +8,18 @@
     --celeste: #C4DDFF;
     --celeste2: #5dbeff;
     --celeste3:rgb(48, 154, 253);
+    --white:#ffffff;
+    --links: #ee6408;
+    --notas:rgb(45, 124, 199);
+    --dark-grey: #0d0e0f;
+    
 
     /* RESETEO */
     box-sizing: border-box;
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     background-color: var(--bg-color);
-    font-weight: 200;
+    font-weight: 400;
 }
 
 
@@ -48,7 +43,7 @@ body {
 header {
     background-color: var(--bg-color-title);
     border-bottom: 1px solid #52525241;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(6px);
     min-height: 10vh;
     max-height: auto;
     display: flex;
@@ -95,6 +90,7 @@ main > section:nth-child(1){
 }
 
 main >section:nth-child(1)> h1{
+    margin-top: 0;
     margin-bottom: 0;
     font-size: clamp(2rem, 4vw, 3.5rem);
 }
@@ -126,20 +122,34 @@ main >section:nth-child(1)>a{
 .section {
     width: 85%;
     margin: 0 auto;
-    text-align: justify;
-    font-family: "Lato", sans-serif;
+    text-align: left;
 }
 
 .section>h2 {
     display: inline-block;
     margin-bottom: 0rem;
     font-size: 1.3rem;
-    color: var(--titles);
+    color: var(--white);
 }
 
-.section>ul {
+.section>ul{
     list-style: none;
     line-height: 1.6rem;
+}
+.section>ol{
+    list-style: none;
+} 
+
+.section>ol>li{
+    margin-left: -2em;
+    margin-bottom: 1rem;
+}
+.section span{
+    font-weight: 500;
+    color: var(--celeste2);
+    text-decoration: underline;
+    display: block;
+    margin-bottom: .5rem;
 }
 
 
@@ -154,8 +164,8 @@ main >section:nth-child(1)>a{
 }
 
 .site-content>h2 {
-    font-size: 1.3rem;
-    color: var(--titles);
+    font-size: clamp(.85rem,3vw,1.3rem);
+    color: var(--celeste3);
 }
 
 
@@ -185,8 +195,16 @@ footer>p {
 🍃    OTRAS FUNCIONALIDADES
 ********************************/
 
-a {
-    color: var(--dark-pink);
+a:link {
+    color: var(--celeste2);
+    text-decoration: none;
+}
+a:visited {
+    color: var(--celeste2);
+    text-decoration: none;
+}
+a:active {
+    color: var(--celeste2);
     text-decoration: none;
 }
 
@@ -196,4 +214,29 @@ a:hover {
 
 hr {
     width: 70%;
+    color: var(--celeste);
+}
+
+[id] {
+    scroll-margin-top: 6ex;
+}
+
+.h1{
+    font-size: clamp(1rem,3vw,1.5rem);
+}
+
+.h2{
+    font-size: clamp(.85rem,3vw,1.3rem);
+}
+
+
+
+.nota{
+    display: inline-block;
+    margin-right: .5rem;
+    padding: .5rem;
+    font-weight: 500;
+    background-color: var(--notas);
+    color:#000;
+    
 }

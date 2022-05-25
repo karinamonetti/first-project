@@ -25,29 +25,53 @@
         <section>
             <h1>¡Bienvenido/a a Mis Apuntes HTML!</h1>
             <h2>Aquí encontrarás <span class="color">teoría</span>, <span class="color">ejemplos visuales </span>y <span class="color">código </span>para facilitar tu aprendizaje.</h2>
-            <a href="#info">Comenzar a aprender</a>
+            <a href="#infoutil">Comenzar a aprender</a>
         </section>
 
+        <!--  NAV LATERAL -->
+        <nav class="sidebar">
+            <div class="text">Menú Lateral</div>
+            <ul>
 
-        <section class="section" id="info">
+                <li>
+                    <a href="#infoutil">Información útil</a>
+                    <ul>
+                        <li><a href="#sitioutil">Sitios útiles de consulta</a></li>
+                        <li><a href="">Introducción</a></li>
+                    </ul>
+                </li>
+                
+                
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
 
-            <h2>Información útil antes de empezar</h2>
+        <!--  -->
+
+
+        <section class="section">
+
+            <h2 id="infoutil">Información útil antes de empezar</h2>
             <p>
                 <ol>
-                    <li> HTML estructura el contenido del sitio a través de etiquetas; estas etiquetas son contenedores o "cajas". Estas cajas, también conocidas como elementos padres, pueden contener otras cajas dentro, siendo éstos los elementos "hijos".
+                    <li> <span>Sobre la estructuración en HTML: </span>HTML estructura el contenido del sitio a través de etiquetas; estas etiquetas son contenedores o "cajas". Estas cajas, también conocidas como elementos padres, pueden contener otras cajas dentro, siendo éstos los elementos "hijos".
                         Para reconocer cuándo es un elemento padre y cuándo es un elemento hijo, debemos fijarnos en la anidación en el código, o sea, si un elemento contiene dentro otros, los elementos hijos podrán ser identificados por una tabulación
                         que los precede.
                     </li>
-                    <li>No todas las etiquetas tienen cierres (&lt;&gt;&lt;/&gt;) sino que hay algunas que son etiquetas de apertura y de cierra al mismo tiempo (&lt;/&gt;)</li>
-                    <li>Un comentario es una sección del código que el navegador no lee, solo sirve para quién tenga acceso al código y para brindar información sobre lo que representa el mismo. Los comentarios en HTML se crean con los siguientes símbolos:
+                    <li> <span>Sobre las etiquetas: </span>No todas las etiquetas tienen cierres (&lt;&gt;&lt;/&gt;) sino que hay algunas que son etiquetas de apertura y de cierra al mismo tiempo (&lt;/&gt;)</li>
+                    <li> <span>Sobre los comentarios: </span>Un comentario es una sección del código que el navegador no lee, solo sirve para quién tenga acceso al código y para brindar información sobre lo que representa el mismo. Los comentarios en HTML se crean con los siguientes símbolos:
                         &lt;!-- Esto es un comentario--&gt; En VSCode el atajo por default para escribirlos es CONTROL+K CONTROL+C
                     </li>
-                    <li>Mientras uno va aprendiendo es interesante analizar cómo están estructurados los sitios, cómo están maquetados y cómo se les ha aplicado estilos. Esto se puede hacer, desde el navegador y dentro del sitio web apretando F12 o yendo
+                    <li><span>Recomendación personal: </span>Mientras uno va aprendiendo es interesante analizar cómo están estructurados los sitios, cómo están maquetados y cómo se les ha aplicado estilos. Esto se puede hacer, desde el navegador y dentro del sitio web apretando F12 o yendo
                         a las herramientas del navegador y buscando la opción "Herramientas para desarrolladores".</li>
                 </ol>
             </p>
 
-            <h2>Sitios útiles de consulta</h2>
+            <h2 id="sitioutil">Sitios útiles de consulta</h2>
             <ul>
                 <li>
                     <a href="https://developer.mozilla.org/es/" target="_blank">MDN Web Docs</a> (Mozilla Developer)
@@ -70,7 +94,151 @@
                 y JavaScript se encarga de la interactividad del sitio, por ejemplo, eventos que ocurren al darle click a un botón.
             </p>
 
-        </section>
+
+
+            
+            <!-- 
+            ETIQUETAS BÁSICAS 
+            
+            -->
+            <h2 id="etiquetas-basicas">Etiquetas básicas</h2>
+            <h3>&lt;html&gt;&lt;/html&gt;</h3>
+            <p>
+                La etiqueta html es la que va a englobar <u>todas</u> las demás dentro del documento. Es la raíz del documento, el padre de todas las demás etiquetas. La misma es solamente precedida por el elemento <b>!DOCTYPE html</b> (primer elemento del
+                documento) que sirve para que el navegador sepa que el sitio fue escrito en HTML y pueda leerlo.
+            </p>
+            <p>
+                <i class="ejemplo" id="ejemplo">Ejemplo en código:</i>
+            </p>
+            <pre class="code">
+                <code>
+                &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;head&gt;
+                        &lt;/head&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+
+
+
+
+
+            <h3>&lt;head&gt;&lt;/head&gt;</h3>
+            <p>
+                Esta etiqueta provee al sitio información sobre metadatos (por ejemplo el tipo de caracteres que lee el sitio, descripción del mismo, autor, etc.), el título del sitio, links a hojas de estilo CSS y enlaces de scripts. Los elementos dentro de esta etiqueta
+                no serán visibles en el sitio ya que solo son información para el navegador. Esta etiqueta es la que sigue inmediatamente a &lt;html&gt;&lt;/html&gt;
+            </p>
+            <p><i class="ejemplo" id="ejemplo">Ejemplo en código:</i></p>
+            <pre class="code">
+            <code>
+                &lt;!DOCTYPE html&gt;
+                &lt;html&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8" /&gt;
+                        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge" /&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+                        &lt;link rel="stylesheet" href="tyle.css"/&gt;
+                        &lt;title&gt;Esto es un ejemplo de HEAD&lt;/title&gt;
+                    &lt;/head&gt;
+                &lt;/html&gt;
+            </code>
+        </pre>
+            <p>
+                <span class="nota">Nota:</span> La etiqueta title es el título del sitio y se visualiza como el nombre de la ventana del navegador.
+            </p>
+
+
+
+            <h3>&lt;body&gt;&lt;/body&gt;</h3>
+            <p>La etiqueta body encierra el contenido del sitio.</p>
+            <p><i class="ejemplo" id="ejemplo">Ejemplo en código:</i></p>
+            <pre class="code">
+            <code>
+                &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            . . . Contenido del head
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            . . . Contenido del sitio
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+            </code>
+        </pre>
+            <p>
+                <span class="nota">Nota:</span> Solo puede haber un body por documento.
+            </p>
+
+
+            <h3>&lt;footer&gt;&lt;/footer&gt;</h3>
+            <p>Es el pie de página del sitio o sección. Puede contener datos del autor del sitio, derechos de autor o links a documentos relacionados. <a href="#footer">Ir al footer del sitio</a></p>
+            <p><i class="ejemplo" id="ejemplo">Ejemplo en código:</i></p>
+            <pre class="code">
+            <code>
+                &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                        &lt;head&gt;
+                            . . . 
+                        &lt;/head&gt;
+                        &lt;body&gt;
+                            . . .
+                            . . . .
+                            &lt;footer&gt;
+                            Este es el sitio web creado por Karina&copy; 2022
+                            &lt;/footer&gt;
+                        &lt;/body&gt;
+                    &lt;/html&gt;
+            </code>
+        </pre>
+
+            <h3>&lt;p&gt;&lt;/p&gt;</h3>
+            <p>Esta etiqueta sirve para escribir párrafos y puede contener dentro elementos de línea (este párrafo se encuentra dentro de una etiqueta p). Estos son algunos de los elementos de línea que pueden existir dentro de un párrafo:
+            </p>
+            <p><i>Cursiva</i></p>
+            <p><b>Negrita</b></p>
+            <p><s>Tachado</s></p>
+            <p><u>Subrayado</u></p>
+            <p>Esto es<sub>Subíndice</sub></p>
+            <p>Esto es<sup>Superíndice</sup></p>
+            <p><i class="ejemplo" id="ejemplo">Ejemplo en código:</i></p>
+            <pre class="code">
+            <code>
+                &lt;p&gt;&lt;i&gt;Cursiva&lt;/i&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;b&gt;Negrita&lt;/b&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;s&gt;Tachado&lt;/s&gt;&lt;/p&gt;
+                &lt;p&gt;&lt;u&gt;Subrayado&lt;/u&gt;&lt;/p&gt;
+                &lt;p&gt;Esto es&lt;sub&gt;Subíndice&lt;/sub&gt;&lt;/p&gt;
+                &lt;p&gt;Esto es&lt;sup&gt;Superíndice&lt;/sup&gt;&lt;/p&gt;
+            </code>
+        </pre>
+
+
+            <h3>Etiquetas para encabezados</h3>
+            <p>Las etiquetas para encabezados están pensadas para marcar los títulos y los subtítulos del documento y van desde el h1 al h6, siendo h1 la de más tamaño:</p>
+            <h1>Esto es un h1</h1>
+            <h2>Esto es un h2</h2>
+            <h3>Esto es un h3</h3>
+            <h4>Esto es un h4</h4>
+            <h5>Esto es un h5</h5>
+            <h6>Esto es un h6</h6>
+            <p><i class="ejemplo" id="ejemplo">Ejemplo en código:</i></p>
+            <pre class="code">
+            <code>
+                &lt;body&gt;
+                    &lt;h1&gt;Esto es un h1&lt;/h1&gt;
+                    &lt;h2&gt;Esto es un h2&lt;/h2&gt;
+                    &lt;h3&gt;Esto es un h3&lt;/h3&gt;
+                    &lt;h4&gt;Esto es un h4&lt;/h4&gt;
+                    &lt;h5&gt;Esto es un h5&lt;/h5&gt;
+                    &lt;h6&gt;Esto es un h6&lt;/h6&gt;
+                &lt;/body&gt;
+            </code>
+        </pre>
+            <p>
+                <span class="nota">Nota:</span> Solo puede haber un h1 por documento.
+            </p>
+            </section>
     </main>
     <footer>
         <p> Hecho con mucho ❤️ por<a href="#volver-arriba"> Karina Monetti</a></p>
